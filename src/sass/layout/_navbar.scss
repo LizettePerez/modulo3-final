@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as *;
+
+.navbar {
+  @include margin-padding();
+  @media (max-width: 576px) {
+    margin: 0 !important;
+    padding: 20px 10px;
+  }
+
+  &__container {
+    background-color: var.$color-background !important;
+  }
+
+  &__brand {
+    color: var.$color-white !important;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: var.$color-primary !important;
+    }
+  }
+
+  &__brand-text {
+    font-size: 1.5rem;
+  }
+
+  &__menu {
+    gap: var.$spacing-md;
+  }
+
+  &__menu-link {
+    color: var.$color-white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var.$color-primary !important;
+    }
+
+    &--active {
+      color: var.$color-primary !important;
+    }
+  }
+
+  &__button {
+    background-color: var.$color-white !important;
+    border-color: var.$color-primary !important;
+    color: var.$color-primary !important;
+    padding: var.$spacing-sm var.$spacing-md;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: darken(var.$color-primary, 10%);
+      border-color: darken(var.$color-primary, 10%);
+      transform: translateY(-2px);
+    }
+  }
+
+  &__logo {
+    width: 300px;
+    object-fit: contain;
+
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+
+    @media (max-width: 576px) {
+      width: 200px;
+    }
+  }
+}

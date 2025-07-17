@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as var;
+
+.accordion-item {
+  margin: 20px 0 !important;
+  border-radius: 8px !important;
+  border: 1px solid $color-white !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button {
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out !important;
+  
+  &:not(.collapsed) {
+    background: #3834B3 !important;
+    background: linear-gradient(180deg, rgba(56, 52, 179, 1) 0%, rgba(14, 13, 60, 0.425) 100%) !important;
+    color: white !important;
+  }
+}
+
+.accordion-body {
+  text-align: left;
+  font-size: 14px;
+  background: var.$color-background !important;
+  color: white !important;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out !important;
+
+}
+
+.accordion-collapse.show .accordion-body {
+  background: linear-gradient(180deg, rgba(14, 13, 60, 0.425) 0%, rgba(15, 23, 43, 1) 100%) !important;
+}

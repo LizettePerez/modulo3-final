@@ -1,0 +1,256 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as var;
+
+
+.brand-section {
+  background-color: var.$color-primary;
+  padding: var.$spacing-lg 0;
+  @include margin-padding-custom(0, 40px 60px);
+
+  @media (max-width: 768px) {
+    @include margin-padding-custom(0, 20px 30px);
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var.$spacing-lg;
+    flex-wrap: wrap;
+
+    img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.7);
+      transition: all 0.3s ease;
+
+      &:hover {
+        filter: grayscale(0%) opacity(1);
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        height: 70px;
+        gap: var.$spacing-md;
+      }
+
+      @media (max-width: 576px) {
+        height: 50px;
+        gap: var.$spacing-sm;
+      }
+    }
+  }
+}
+
+.services {
+  @include margin-padding();
+
+  &__card-button {
+    color: var.$color-white;
+    border-color: var.$color-primary;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    i {
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    &:hover {
+      color: darken(var.$color-white, 50%);
+    }
+
+
+  }
+
+  &__card-body {
+    @include flex-center();
+    flex-direction: column;
+    text-align: center;
+
+  }
+
+  &__card-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #5046e5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: var.$color-white;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+
+  }
+
+  // &__card--first {
+  //   background: #3834B3 !important;
+  //   background: linear-gradient(180deg, rgba(56, 52, 179, 1) 0%, rgba(14, 13, 60, 1) 100%) !important;
+  // }
+
+  &__card-text {
+    color: var.$color-text-secondary;
+  }
+
+  &__grid {
+    @media (max-width: 991px) and (min-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+}
+
+.contact {
+  @include margin-padding();
+  text-align: center;
+
+  @media (max-width: 425px) {
+    padding: 0px 10px !important;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: 425px) {
+      justify-content: center;
+      gap: 0;
+
+    }
+
+  }
+
+  &__grid-accordion {
+    width: 45%;
+
+    @media (max-width: 425px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__grid-form {
+    width: 45%;
+
+    @media (max-width: 425px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__form {
+    &-group {
+      text-align: left !important;
+    }
+
+    &-label {
+      text-align: left !important;
+      display: block;
+      width: 100%;
+    }
+
+    &-notice {
+      font-size: 14px;
+      text-align: left !important;
+
+      @media (max-width: 768px) {
+        br {
+          display: none;
+        }
+      }
+
+      @media (max-width: 425px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__modal-close.btn-close {
+    filter: brightness(0) invert(1);
+  }
+
+}
+
+.portfolio {
+  @include margin-padding();
+
+  @media (max-width: 425px) {
+    padding: 10px 10px !important;
+  }
+
+  &__buttons {
+    @include flex-center();
+    flex-direction: column;
+    gap: var.$spacing-md;
+    margin-bottom: var.$spacing-lg;
+    align-items: flex-start !important;
+
+    @media (max-width: 768px) {}
+
+    @media (max-width: 426px) {
+      align-items: center !important;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__imgs-grid {
+    @include flex-center();
+  }
+
+  &__img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  &__img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var.$color-primary;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+  }
+
+  &__img-container:hover &__img-overlay {
+    opacity: 0;
+  }
+
+  &__img-container:hover &__img {
+    transform: scale(1.05);
+  }
+
+  a {
+    text-decoration: none;
+    color: var.$color-white;
+
+    i {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      color: var.$color-primary;
+      text-decoration: none;
+    }
+  }
+
+  &__grid-resp {
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as var;
+
+.modal-content {
+  background: #0D182A;
+  background: linear-gradient(90deg, rgba(13, 24, 42, 1) 0%, rgba(26, 41, 56, 1) 100%);
+  border: 1px solid var.$color-primary;
+}
+
+.modal-header, .modal-footer{
+  border-bottom: none;
+  border-top: none;
+}
+
+

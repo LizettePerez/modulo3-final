@@ -1,0 +1,25 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin margin-padding-custom($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin margin-padding {
+  margin: 20px 50px;
+  padding: 16px 60px;
+
+  @media (max-width: 768px) {
+    margin: 15px 30px;
+    padding: 12px 40px;
+  }
+
+  @media (max-width: 576px) {
+    margin: 5px 10px !important;
+    padding: 50px 10px;
+  }
+}

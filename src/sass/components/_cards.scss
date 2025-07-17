@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as var;
+
+
+.card {
+  background: #0D182A;
+  background: linear-gradient(90deg, rgba(13, 24, 42, 1) 0%, rgba(26, 41, 56, 1) 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: default;
+
+  &:hover {
+    background: #3834B3 !important;
+    background: linear-gradient(180deg, rgba(56, 52, 179, 1) 0%, rgba(14, 13, 60, 1) 100%) !important;
+    transform: scale(1.05);
+
+  }
+}

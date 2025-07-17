@@ -1,0 +1,5 @@
+@use "../abstracts/variables" as var;
+
+.form-control {
+  color: var.$color-white;
+}

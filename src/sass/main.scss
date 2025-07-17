@@ -1,0 +1,50 @@
+@import "./abstracts/variables";
+
+$body-bg: $color-background;
+$body-color: $color-white;
+$font-family-base: $font-base;
+
+$primary: $color-primary;
+$secondary: $color-section-bg;
+
+//btn
+$btn-border-radius: $border-radius-xxl;
+// card
+$card-border-color: $primary;
+// accordion
+$accordion-button-active-bg: transparent !important;
+$accordion-button-active-color: $color-white;
+$accordion-border-radius: 8px;
+$accordion-border-color: transparent;
+$accordion-inner-border-radius: 8px;
+$accordion-button-focus-border-color: transparent !important;
+$accordion-icon-active-color: $color-white;
+//form
+$input-placeholder-color: $color-text-secondary;
+$input-border-radius: 8px;
+$input-border-radius-sm: 8px;
+$input-border-radius-lg: 8px;
+$input-padding-y: 20px;
+$input-padding-x: 20px;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/root";
+
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/scrollbar";
+@import "./layout/navbar";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+@import "./components/cards";
+@import "./components/accordion";
+@import "./components/buttons";
+@import "./components/modal";
+@import "./components/form";

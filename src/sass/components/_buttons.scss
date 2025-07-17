@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as var;
+
+.btn {
+  border-radius: var.$border-radius-xxl;
+}
+
+.btn-close {
+  filter: invert(1) !important;
+  opacity: 1;
+}

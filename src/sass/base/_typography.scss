@@ -1,0 +1,87 @@
+@use '../abstracts/variables' as var;
+
+h1 {
+  font-family: var.$font-base;
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    line-height: 3.75rem;
+  }
+}
+
+
+h2 {
+  font-family: var.$font-base;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.75rem;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
+
+
+// h3 {
+//   font-family: var.$font-base;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-size: 22px;
+//   line-height: 30px;
+// }
+
+h5 {
+  font-family: var.$font-base;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+
+}
+
+// small {
+//   font-family: var.$font-base;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   font-size: 18px;
+//   letter-spacing: 5px;
+//   line-height: 25px;
+//   margin-bottom: 0;
+
+//   @media (max-width: 768px) {
+//     font-size: 14px;
+//     line-height: 20px;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 12px;
+//     line-height: 18px;
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
+
+
+p {
+  font-family: var.$font-base;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.875rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+  }
+
+  @media (max-width: 480px) {
+    line-height: 1.375rem;
+  }
+}
